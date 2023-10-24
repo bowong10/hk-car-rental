@@ -1,0 +1,42 @@
+.sbox-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+.sbox {
+  border: solid black 1px;
+  padding: 5px;
+  width: 40px;
+  text-align: center;
+  margin-right: 0.5em;
+  background-color: white;
+}
+
+.sizeGrey {
+  border: solid lightgrey 1px;
+  padding: 5px;
+  width: 40px;
+  text-align: center;
+  margin-right: 0.5em;
+  background-color: lightgrey;
+}
+
+.size-box li {
+  padding: 5px 0;
+  margin-bottom: 3px;
+}
+
+.sizeon {
+  background-color: black;
+  color: white;
+}
+
+ul {
+  text-decoration: none;
+}
+
+.radiom {
+  border-radius: 15px;
+}

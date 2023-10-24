@@ -1,0 +1,416 @@
+/* The container */
+.cb_container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cb_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.cb_container:hover input~.checkmark {
+    background-color: var(--clr-primary-pblue);
+}
+
+/* When the checkbox is checked, add a blue background */
+.cb_container input:checked~.checkmark {
+    background-color: var(--clr-primary-lblue);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.cb_container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.cb_container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.shopcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* margin-top: 1.5em;
+    margin-bottom: 1.5em; */
+}
+
+.shoptop {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.shopMenu {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.filter_section {
+    color: var(--clr-primgary-greyw);
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    padding: 5px;
+    border-bottom: var(--clr-primary-lgrey) solid 1px;
+    margin-bottom: 1em;
+}
+
+.filterBox {
+    display: none;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    /* flex-basis: 250px; */
+    min-width: 250px;
+    padding: 0 5px;
+    border-right: var(--clr-primary-greyl) solid 1px;
+}
+
+/* current */
+/* .filterBox {
+  display: none;
+} */
+
+.sfilterBox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 200;
+    transition: all 0.3s ease-out;
+    background-color: white;
+    padding: 0 10px;
+}
+
+.filter_section {
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: none !important;
+    padding-top: 15px;
+}
+
+.sfilterBox>div:first-child {
+    border-bottom: 1px solid var(--clr-primary-ldgrey);
+}
+
+.filterHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sfilterHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border: 1px solid var(--clr-primary-ldgrey);
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+.arrowUp {
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--clr-primary-ldgrey);
+    border-left: 2px solid var(--clr-primary-ldgrey);
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+}
+
+.arrowDown {
+    transform: rotate(225deg);
+}
+
+/* end of current */
+
+.shop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+.shop>div {
+    display: flex;
+    flex: 1 0;
+    flex-wrap: wrap;
+    padding: 0 10px;
+} */
+
+.prodhead {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+.prodhead>div>ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.prodhead>div>ul>li {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.filterApply {
+    display: flex;
+    background-color: var(--clr-primary-dgrey);
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 0.5em;
+}
+
+
+.filterApply {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.filter-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.filter-items>div {
+    display: flex;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: var(--clr-primary-ldgrey);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.filter-title {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: white 1px solid;
+}
+
+.filter-control {
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-control>button {
+    flex: 1 1;
+    margin: 0 3px;
+    padding: 5px;
+    background-color: #252525;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 550;
+}
+
+.filter-control>button:hover {
+    color: var(--clr-primary-lblue);
+}
+
+.off {
+    display: none;
+}
+
+.lion {
+    font-weight: 500;
+    border-bottom: 1px solid black;
+}
+
+.spantxt {
+    font-size: 14px;
+}
+
+.carType {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 0.5em;
+    min-width: 75px;
+}
+
+.shopheader {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchInfo {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.searchControl {
+    margin: 10px;
+    display: none;
+}
+
+.searchControl>div {
+    padding: 10px !important;
+    flex: 1 1;
+}
+
+.tripbox {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 1em;
+}
+
+.triptf {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tripFlow {
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+    margin: 0 10px;
+}
+
+.tripEdit {
+    min-width: 100px;
+    background-color: rgb(255 205 143);
+    border-radius: 1em;
+    border: none;
+}
+
+.tripc {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tripbox>div {
+    display: flex;
+    flex-direction: row;
+}
+
+.rf {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.rf>div {
+    display: flex;
+    /* flex:1; */
+    cursor: pointer;
+    justify-content: center;
+    /* border: 1px solid rgb(165, 165, 165); */
+    border-radius: 0.5em;
+    padding: 5px;
+}
+
+@media (min-width: 1140px) {
+    .sfilterHead {
+        display: none;
+    }
+
+    .filterBox {
+        display: flex !important;
+        max-width: 250px;
+        border: 1px grey solid;
+        border-radius: 0.5em;
+        margin-right: 5px;
+    }
+
+    .sfilterBox {
+        display: none;
+    }
+
+    /* .shopMenu {
+        flex-direction: row;
+    } */
+
+    .shop {
+        flex-direction: row;
+    }
+
+    .searchControl {
+        display: none !important;
+    }
+
+    /* .rf > div {
+        flex: 1 1;
+    }*/
+}
