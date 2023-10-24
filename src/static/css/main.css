@@ -1,0 +1,277 @@
+:root {
+  --clr-primary-grey: #181818;
+  --clr-primary-llgrey: #f3f3f3;
+
+  --clr-primary-lgrey: #cacaca;
+  --clr-primary-ldgrey: #818181;
+  --clr-primary-white: #ffffff;
+  --clr-primary-dgrey: #252525;
+  --clr-primary-lblue: #2196f3;
+  --clr-primary-bblue: hsla(219, 100%, 60%, 0.952);
+  --clr-primary-dblue: #2b347c;
+  --clr-primary-pblue: #4f7898;
+  --clr-primary-green: green;
+}
+
+#root {
+  width: 100%;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+  min-width: 360px;
+  background-color: var(--clr-primary-white);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+  font-size: 16px;
+} */
+
+p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+img.square {
+  max-width: 400px;
+}
+
+img.fixheight {
+  display: block;
+  height: 50px;
+  width: auto;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: 400px;
+}
+.header-grey {
+  padding:10px;
+  background-color: var(--clr-primary-white);
+}
+.img-wrapper {
+
+  position:absolute;
+  left:0;
+  top:50px;
+  /* change the default display type to inline-block */
+  overflow: hidden;
+  width:100%
+  /* hide the overflow */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--clr-primary-grey);
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar ul > li {
+  padding: 15px 0;
+}
+
+.navbar li:hover {
+  color: #000000;
+  background-color: #cecece;
+  text-decoration: none;
+  transform: skew(-20deg);
+  cursor: pointer;
+} */
+
+/* .on {
+  color: #85fa09;
+  background-color: #77867f;
+  transform: skew(-20deg);
+} */
+
+.imgc {
+  display: block;
+  min-width: 90%;
+  margin: auto;
+}
+
+.inner90 {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+  min-width: 360px;
+}
+
+.margin10 {
+  margin: 0 10px;
+}
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.split100 {
+  display: flex;
+  flex-direction: column;
+}
+
+.splitouter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.splitouter > img {
+  padding: 0.5em;
+}
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+
+  .split100 {
+    flex-direction: row;
+  }
+  .split100 > * {
+    flex-basis: 100%;
+  }
+
+  .split100 > * + * {
+    margin-left: 2em;
+  }
+}
+
+/* @media screen and (max-width: 767px) {   
+    #main-img{
+        content: url(http://subtlepatterns.com/patterns/dark_embroidery.png) !important;
+    } 
+} */
+
+/* section {
+  padding: 20px 0px;
+} */
+
+section {
+  text-align: center;
+}
+section>p {
+  text-align: left;
+}
+.img-mid {
+  margin-inline: auto;
+}
+
+.space {
+  margin-bottom: 3em;
+}
+.spacet {
+  margin-top: 3em;
+}
+.spaces {
+  margin-bottom: 2em;
+}
+
+.split div {
+  flex-grow: 1;
+  flex-basis: 33.33%;
+}
+
+.footer-container {
+  padding: 50px;
+  background-color: var(--clr-primary-grey);
+  color: var(--clr-primary-white);
+}
+
+.septor {
+  display: flex;
+  /* flex-directon: row; */
+}
+
+.push {
+  margin-left: auto;
+}
+/* .left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+*/
+/* 
+.right ul li {
+  margin-left: 1em;
+  padding: 5px;
+} */
+
+.right span {
+  height: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#mortal_title {
+  font-family: Roboto, "Sans-serif";
+}
+
+#mortal_content {
+  font-family: "Brush Script MT", "Brush Script Std", cursive;
+}
+
+.font500 {
+  font-weight: 500;
+}
+
+input[type="password"],
+textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 10px 0px 10px 10px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #dddddd;
+}

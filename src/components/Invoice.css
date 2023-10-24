@@ -1,0 +1,58 @@
+.invoice {
+  font-size: 14px;
+  max-width: 800px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--clr-primary-lgrey);
+}
+.isec {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  border-top: 1px solid var(--clr-primary-lgrey);
+  padding: 1em 0;
+}
+
+.ilsec {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+}
+
+.ilsec > div {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.isec > div {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+  /* padding-bottom: 1em; */
+}
+
+.isec .right {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+.right > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imsg {
+  padding-bottom: 1em;
+}
+.imsg > div {
+  padding: 2px 0;
+}
+
+.ibo {
+  font-weight: 600;
+}
+
+.paysec {
+  margin: 1em 0;
+}
