@@ -65,6 +65,7 @@ const Car_Card = ({name, imageUrl, id}) => {
                             <div>Automatic</div>
                             <div>Unlimited mileage</div>
                             <div>Instant confirmation</div>
+                            
                         </div>
                     </div>
                     <div class="g_price">

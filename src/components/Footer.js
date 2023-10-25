@@ -1,10 +1,9 @@
 import React from 'react'
 import './Footer.css';
-
-
 import {FaFacebookSquare} from 'react-icons/fa'
 import {BsYoutube} from 'react-icons/bs'
 import {BsInstagram} from 'react-icons/bs'
+
 
 const Footer = () => {
     return (
