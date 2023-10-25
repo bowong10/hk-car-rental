@@ -104,14 +104,14 @@ const Login = () => {
                 </div>
                 
                 <div className="checkOutBtn"><button type='submit' onClick={(e) => onSubmitHandler(e)}>Submit</button></div>
-                
+{/*                 
                 <div>
-                    {/* <ReCAPTCHA
+                    <ReCAPTCHA
                         ref={captcha}
                         sitekey="6LdZ5GAcAAAAANdQ3CqW4dLxz2wVgMv-U2_ptepc"
                         onChange={onChange}    
-                    /> */}
-                </div>
+                    />
+                </div> */}
                 {/* {captchaValid === false && <div className="danger">Please verify you are not a robot.</div>} */}
                 <div>
                     <Link to={`./reset_password`}>
@@ -129,7 +129,7 @@ const Login = () => {
                     </Link>
                 </div>
 
-                {msg?<div className="danger">{msg}</div>: <div></div>}
+                {msg?<div className="danger">{msg}</div>: null}
         </div>
 
         <div id="logEnd">

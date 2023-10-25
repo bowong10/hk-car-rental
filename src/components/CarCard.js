@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Car_Card.css'
+import './CarCard.css'
 
-const Car_Card = ({name, imageUrl, id}) => {
+const CarCard = ({name, imageUrl, id}) => {
 
     return (
         <>
@@ -79,4 +79,4 @@ const Car_Card = ({name, imageUrl, id}) => {
     );
 };
 
-export default Car_Card;
+export default CarCard;

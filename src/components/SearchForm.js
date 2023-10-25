@@ -1,16 +1,16 @@
-import { React, useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import CustomField from './CustomField'
 import CustomTxtField from './CustomTxtField'
 import {Link} from 'react-router-dom';
-
+import useComponentVisible from '../customhook/useComponentVisible';
 
 const SearchForm = ({checked, setChecked, show}) => {
 
     // console.log(show);
-
+    
     return(
         <div id="SearchForm" style={{"display":show==true?"flex":"none"}}>
-            <div className="loc" style={{"minWidth":"400px"}}>
+            <div className="loc">
                 <CustomTxtField txt="Pick-up location" val="default location" show_element="true"/>
                 {checked? null: <CustomTxtField txt="Drop-off location" val="default location2" show_element="true"/> }
             </div>

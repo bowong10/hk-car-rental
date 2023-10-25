@@ -113,6 +113,15 @@
     }
 }
 
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: auto 150px;
+    }
+
+}
+
+
 /* 
 .card:hover {
     transform: scale(1.2);

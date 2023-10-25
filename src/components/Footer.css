@@ -1,5 +1,5 @@
 .footer-container {
-  display: absolute;
+  position: absolute;
   bottom: 0px;
   width:100%;
 }
@@ -64,3 +64,12 @@
   margin-left: 0.5em;
   color: white;
 }
+
+
+
+@media (max-width: 40em) {
+ .footer-container{
+    position: relative;
+ }
+}
+

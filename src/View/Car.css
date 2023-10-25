@@ -315,9 +315,11 @@
     display: none;
 }
 
-.searchControl>div {
+.searchControl > div  {
     padding: 10px !important;
     flex: 1 1;
+    border-radius: 0.5em;
+    border: 1px solid lightgrey;
 }
 
 .tripbox {

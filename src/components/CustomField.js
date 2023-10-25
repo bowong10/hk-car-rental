@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef} from 'react'
 import {MdDateRange} from 'react-icons/md'
 import {LuClock2} from 'react-icons/lu'
 
@@ -7,13 +7,30 @@ const CustomField= ({icon, txt, val}) => {
 
   const [ctrlval, setctrlval] = useState(val);
   const [etime, setetime] = useState("noon");
-  const [show, setdisplay] = useState(false);
+  const [display, setdisplay] = useState(false);
+
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if(!menuRef.current.contains(e.target)){
+        setdisplay(false);
+      }
+    }
+    document.addEventListener("mousedown", handler);
+
+    return() => {
+      document.removeEventListener("mousedown", handler);
+    }
+  });
 
 
   function handleClick()
   {
-    setdisplay(!show);
+    setdisplay(!display);
   }
+
   const timelist = [
     {
       id: "6",
@@ -59,20 +76,23 @@ const CustomField= ({icon, txt, val}) => {
         <div className='cf'>
             <div>{txt}</div>
             <div>{ctrlval}</div>
+            <div className="db" ref={menuRef}>
+              <div style={display?{display:"block"} : {display:"none"}}>
+
+                {icon == "time" ?
+                    <ul>
+                    {timelist.map((x) => {
+                      return <li key={x.id} onClick={() => {setctrlval(x.val); handleClick();}}>{x.val}</li>
+                    })
+                    }
+                  </ul>
+                  :
+                  <div>datepicker</div>
+                }
+              </div>
+            </div>
         </div>
-        {icon == "time" ?
-      <div className="db" style={show?{display:"block"} : {display:"none"}}>
-        <ul>
-          {timelist.map((x) => {
-            return <li key={x.id} onClick={() => {setctrlval(x.val); handleClick();}}>{x.val}</li>
-            // return <Listxitem id={x.id} val={x.val} setstime={setstime} />
-          })
-          }
-        </ul>
-      </div>
-      : <>
-          <div className="db" style={show?{display:"block"} : {display:"none"}}>datepicker</div>
-          {/* <div>
+{/* <div>
             <DatePicker disablePreviousDays />
             <hr />
             <div>{pickedDates.firstPickedDate?.toString()}</div>
@@ -81,8 +101,7 @@ const CustomField= ({icon, txt, val}) => {
               Reset
             </button>
           </div> */}
-
-      </>}
+        
     </div>
   )
 }

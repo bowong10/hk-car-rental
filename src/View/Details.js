@@ -1,6 +1,6 @@
 import React from 'react'
 import './Details.css';
-import Car_Card from '../components/Car_Card';
+import CarCard from '../components/CarCard';
 
 const Details = () => {
   return (
@@ -9,7 +9,7 @@ const Details = () => {
       <div className='titletxt2'>Booking Car Details</div>
 
       <div className="shopMenu details" >
-        <Car_Card id={1} imageUrl={"car1.png"} name="Honda" />
+        <CarCard id={1} imageUrl={"car1.png"} name="Honda" />
         <div className='detailsPrice'>
           <div>
               Car price breakdown

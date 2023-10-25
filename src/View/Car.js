@@ -1,10 +1,10 @@
 import './Car.css';
-import Car_Card from '../components/Car_Card';
-import React, { useEffect, useState} from 'react';
+import CarCard from '../components/CarCard';
+import React,{ useState } from 'react';
 // import { useDispatch, useSelector} from 'react-redux';
-import {useParams} from 'react-router-dom';
+// import {useParams} from 'react-router-dom';
 
-import FilterRadio from '../components/FilterRadio';
+// import FilterRadio from '../components/FilterRadio';
 import FilterCheckbox from '../components/FilterCheckbox';
 import SearchForm from '../components/SearchForm';
 
@@ -12,15 +12,14 @@ const Car = () => {
     
     const [checked, setChecked] = useState(true);
     const [edit, setEdit] = useState(false);
-    const handleCheck = () => {
-        setChecked(!checked);
-        console.log(checked);
-    }
+
+    // const handleCheck = () => {
+    //     setChecked(!checked);
+    //     console.log(checked);
+    // }
 
     const handleEdit = () => {
         setEdit(!edit); 
-        console.log("edit");
-        console.log(edit);
     }
 
     return (
@@ -54,7 +53,7 @@ const Car = () => {
                 </div>
             </div>
             <div className='searchInfo'>
-               Los Angeles International Airport: 36 cars available
+               Hong Kong International Airport: 12 cars available
             </div>
             <div className="shop">
                 
@@ -155,18 +154,18 @@ const Car = () => {
                             <ProductPage totalPages={totalPages} page={page} setPage={setPage}/>
                         </div> */}
                             {/* <img src={car4} alt="" /> */}
-                        <Car_Card id={1} imageUrl={"car1.png"} name="Honda" />
-                        <Car_Card id={2} imageUrl={"car2.png"} name="Toyota" />
-                        <Car_Card id={3} imageUrl={"car3.png"} name="Wakanda" />
-                        <Car_Card id={4} imageUrl={"car4.png"} name="Audi" />
-                        <Car_Card id={5} imageUrl={"car2.png"} name="Toyota" />
-                        <Car_Card id={6} imageUrl={"car3.png"} name="Wakanda" />
-                        <Car_Card id={7} imageUrl={"car4.png"} name="Audi" />
-                        <Car_Card id={8} imageUrl={"car1.png"} name="Audi" />
-                        <Car_Card id={9} imageUrl={"car2.png"} name="Toyota" />
-                        <Car_Card id={10} imageUrl={"car3.png"} name="Wakanda" />
-                        <Car_Card id={11} imageUrl={"car4.png"} name="Audi" />
-                        <Car_Card id={12} imageUrl={"car1.png"} name="Audi" />
+                        <CarCard id={1} imageUrl={"car1.png"} name="Honda" />
+                        <CarCard id={2} imageUrl={"car2.png"} name="Toyota" />
+                        <CarCard id={3} imageUrl={"car3.png"} name="Wakanda" />
+                        <CarCard id={4} imageUrl={"car4.png"} name="Audi" />
+                        <CarCard id={5} imageUrl={"car2.png"} name="Toyota" />
+                        <CarCard id={6} imageUrl={"car3.png"} name="Wakanda" />
+                        <CarCard id={7} imageUrl={"car4.png"} name="Audi" />
+                        <CarCard id={8} imageUrl={"car1.png"} name="Audi" />
+                        <CarCard id={9} imageUrl={"car2.png"} name="Toyota" />
+                        <CarCard id={10} imageUrl={"car3.png"} name="Wakanda" />
+                        <CarCard id={11} imageUrl={"car4.png"} name="Audi" />
+                        <CarCard id={12} imageUrl={"car1.png"} name="Audi" />
                         
                     </div>
                 </div>
